@@ -12,6 +12,7 @@
         <module>user</module>
         <module>order1</module>
         <module>order2</module>
+        <module>eureka-server1</module>
     </modules>
     <name>spring-cloud-tutorial</name>
     <description>Demo project for Spring Boot</description>

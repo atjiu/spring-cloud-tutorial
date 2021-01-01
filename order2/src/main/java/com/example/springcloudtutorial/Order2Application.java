@@ -3,7 +3,7 @@ package com.example.springcloudtutorial;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Order2Application {
 
-    @GetMapping("/order/create")
-    public Object create(String userId) {
+    @PostMapping("/order/create")
+    public String create(String userId) {
         return "userId: " + userId + " create an order! server: order2";
     }
 
