@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Component
-@FeignClient("ORDER")
+@FeignClient(value = "ORDER")
 public interface IOrderService {
 
     @PostMapping("/order/create")
