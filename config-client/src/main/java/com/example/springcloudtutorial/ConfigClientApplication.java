@@ -13,10 +13,12 @@ public class ConfigClientApplication {
 
     @Value("${site.name:}")
     private String siteName;
+    @Value("${site.pageSize:}")
+    private Integer pageSize;
 
     @GetMapping("/getConfig")
     public Object getConfig() {
-        return "getConfig: " + siteName;
+        return "getConfig: " + siteName + ", pageSize:" + pageSize;
     }
 
     public static void main(String[] args) {
