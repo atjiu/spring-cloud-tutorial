@@ -1,0 +1,12 @@
+server:
+  port: 18085
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          search-paths: spring-cloud-config-test
+          uri: https://gitee.com/tomoya/spring-cloud-config-test.git
