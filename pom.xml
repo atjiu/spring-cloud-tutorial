@@ -19,6 +19,11 @@
         <module>stream-provider</module>
         <module>stream-consumer1</module>
         <module>stream-consumer2</module>
+        <module>nacos-provider1</module>
+        <module>nacos-provider2</module>
+        <module>nacos-consumer</module>
+        <module>nacos-sentinel</module>
+        <module>nacos-openfeign</module>
     </modules>
     <name>spring-cloud-tutorial</name>
     <description>Demo project for Spring Boot</description>
@@ -29,6 +34,7 @@
         <!--        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>-->
         <spring-cloud.version>2020.0.0</spring-cloud.version>
         <spring-boot.version>2.4.1</spring-boot.version>
+        <alibaba-nacos.version>2.2.1.RELEASE</alibaba-nacos.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +50,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-nacos.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
